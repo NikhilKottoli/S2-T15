@@ -1,4 +1,4 @@
-# Elliptic Curve Cryptography (ECC) 
+# Sound Triggered Lock System
 
 <!-- First Section -->
 ## Team Details
@@ -23,11 +23,11 @@
 <details>
   <summary>Detail</summary>
   
-   Elliptic Curve Cryptography (ECC) is a public-key cryptosystem that has high efficiency and security. Our unique contribution lies in the introduction of a hybrid approach that combines traditional ECC methods with efficient point multiplication techniques to minimizeDiffie-Hellman. 
+   In an age where security systems are becoming increasingly advanced, traditional lock mechanisms often fall short in terms of user-friendliness and accessibility, especially to those who are visually challenged. Sound-triggered locks represent a novel approach to security by leveraging acoustic recognition technology. This innovation allows users to unlock their doors using specific sound patterns, such as claps, enhancing both convenience and security.
 
-Traditional cryptographic systems require larger key sizes to provide equivalent security, which leads to greater computational overhead, increased energy consumption, and higher bandwidth usage. ECC, by comparison, provides the same level of security with significantly smaller key sizes, making it an ideal solution for such constrained environments.
+The motivation behind this project stems from the need for intuitive security solutions that reduce reliance on keys and other physical security measures, which can be lost or stolen. By incorporating a sound recognition system, we aim to create a more seamless interaction between users and their security devices. This solution not only caters to tech-savvy individuals but also serves those with physical limitations who may find traditional locks difficult.
 
-we  design and implement an optimized ECC system that further reduces computational complexity and improves performance for key exchange and encryption processes. Our unique contribution lies in the introduction of a hybrid approach that combines traditional ECC methods with efficient point multiplication techniques to minimize the time complexity of cryptographic operations. 
+Our unique contribution involves the development of a sound-triggered lock system with several key features: it verifies input patterns to ensure only authorised individuals can unlock it, allows users to reset their sound-based passwords easily, and implements a safety mechanism that locks the system after three incorrect attempts. Additionally, The new password must have at least five claps in the password sequence separated by at least 1 pause in between, enhancing security and complexity. This project not only showcases the potential of sound-based security solutions but also paves the way for future innovations in smart locking mechanisms, making everyday interactions with security systems more intuitive and efficient.    
 
 </details>
 
