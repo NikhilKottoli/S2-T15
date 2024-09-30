@@ -1,4 +1,4 @@
-# Sound Triggered Lock System
+# MatrixManipulator
 
 <!-- First Section -->
 ## Team Details
@@ -23,11 +23,14 @@
 <details>
   <summary>Detail</summary>
   
-   In an age where security systems are becoming increasingly advanced, traditional lock mechanisms often fall short in terms of user-friendliness and accessibility, especially to those who are visually challenged. Sound-triggered locks represent a novel approach to security by leveraging acoustic recognition technology. This innovation allows users to unlock their doors using specific sound patterns, such as claps, enhancing both convenience and security.
+   Efficient handling of matrices is crucial in various fields, including computer graphics, engineering, and data science and machine learning. the need for such systems which can efficiently compute the transpose and determinant is crucial for these emerging fields.
+   
+This project addresses the need for efficient matrix operations by developing a tool that exclusively uses combinational and sequential circuits to perform multiplication, transposition, and determinant calculations. This solution is grounded in digital systems and is a scaled-down version of
 
-The motivation behind this project stems from the need for intuitive security solutions that reduce reliance on keys and other physical security measures, which can be lost or stolen. By incorporating a sound recognition system, we aim to create a more seamless interaction between users and their security devices. This solution not only caters to tech-savvy individuals but also serves those with physical limitations who may find traditional locks difficult.
+Efficiently multiplies two matrices, handling various inputs and displaying the resulting product in a clear format. 
+Allows users to easily find the transpose of any matrix, visually presenting the result
+Performs scalar multiplication and matrix subtraction and addition. Accurately computes the determinant of square matrices and indicates the existence of an inverse. Easy user interface to input and display outputs.
 
-Our unique contribution involves the development of a sound-triggered lock system with several key features: it verifies input patterns to ensure only authorised individuals can unlock it, allows users to reset their sound-based passwords easily, and implements a safety mechanism that locks the system after three incorrect attempts. Additionally, The new password must have at least five claps in the password sequence separated by at least 1 pause in between, enhancing security and complexity. This project not only showcases the potential of sound-based security solutions but also paves the way for future innovations in smart locking mechanisms, making everyday interactions with security systems more intuitive and efficient.    
 
 </details>
 
