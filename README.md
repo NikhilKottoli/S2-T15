@@ -48,8 +48,11 @@ Performs scalar multiplication and matrix subtraction and addition. Accurately c
 
 The circuit works in the following manner:
 
-
-This flowchart demonstrates a systematic process for comparing two 8-bit binary numbers, incorporating multiple stages of comparison and logical operations to produce the final comparison output.
+The user inputs a matrix and can do the follwing:
+1.Add/Subtrace another matrix to it
+2.Multiply a valid matrix to it.
+3.Find the transpose of it.
+4.Find the inverse of it, given it exists.
 
 ### Flowchart
 
