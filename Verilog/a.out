@@ -1,0 +1,170 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x152e06c20 .scope module, "tb_matrix_adder_2x2" "tb_matrix_adder_2x2" 2 6;
+ .timescale -9 -12;
+v0x152e18820_0 .var "a11", 2 0;
+v0x152e188b0_0 .var "a12", 2 0;
+v0x152e18940_0 .var "a21", 2 0;
+v0x152e189d0_0 .var "a22", 2 0;
+v0x152e18a60_0 .var "b11", 2 0;
+v0x152e18b30_0 .var "b12", 2 0;
+v0x152e18bc0_0 .var "b21", 2 0;
+v0x152e18c70_0 .var "b22", 2 0;
+v0x152e18d20_0 .net "c11", 3 0, L_0x152e192c0;  1 drivers
+v0x152e18e50_0 .net "c12", 3 0, L_0x152e196b0;  1 drivers
+v0x152e18ee0_0 .net "c21", 3 0, L_0x152e19af0;  1 drivers
+v0x152e18f70_0 .net "c22", 3 0, L_0x152e19ee0;  1 drivers
+S_0x152e06d90 .scope task, "display_matrices" "display_matrices" 2 23, 2 23 0, S_0x152e06c20;
+ .timescale -9 -12;
+TD_tb_matrix_adder_2x2.display_matrices ;
+    %vpi_call 2 25 "$display", "Matrix A (3-bit):" {0 0 0};
+    %vpi_call 2 26 "$display", "%3b (%0d) %3b (%0d)", v0x152e18820_0, v0x152e18820_0, v0x152e188b0_0, v0x152e188b0_0 {0 0 0};
+    %vpi_call 2 27 "$display", "%3b (%0d) %3b (%0d)", v0x152e18940_0, v0x152e18940_0, v0x152e189d0_0, v0x152e189d0_0 {0 0 0};
+    %vpi_call 2 29 "$display", "Matrix B (3-bit):" {0 0 0};
+    %vpi_call 2 30 "$display", "%3b (%0d) %3b (%0d)", v0x152e18a60_0, v0x152e18a60_0, v0x152e18b30_0, v0x152e18b30_0 {0 0 0};
+    %vpi_call 2 31 "$display", "%3b (%0d) %3b (%0d)", v0x152e18bc0_0, v0x152e18bc0_0, v0x152e18c70_0, v0x152e18c70_0 {0 0 0};
+    %vpi_call 2 33 "$display", "Result Matrix C (4-bit):" {0 0 0};
+    %vpi_call 2 34 "$display", "%4b (%0d) %4b (%0d)", v0x152e18d20_0, v0x152e18d20_0, v0x152e18e50_0, v0x152e18e50_0 {0 0 0};
+    %vpi_call 2 35 "$display", "%4b (%0d) %4b (%0d)", v0x152e18ee0_0, v0x152e18ee0_0, v0x152e18f70_0, v0x152e18f70_0 {0 0 0};
+    %vpi_call 2 37 "$display", "--------------------" {0 0 0};
+    %end;
+S_0x152e06f50 .scope module, "uut" "matrix_adder_2x2" 2 16, 3 1 0, S_0x152e06c20;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 3 "a11";
+    .port_info 1 /INPUT 3 "a12";
+    .port_info 2 /INPUT 3 "a21";
+    .port_info 3 /INPUT 3 "a22";
+    .port_info 4 /INPUT 3 "b11";
+    .port_info 5 /INPUT 3 "b12";
+    .port_info 6 /INPUT 3 "b21";
+    .port_info 7 /INPUT 3 "b22";
+    .port_info 8 /OUTPUT 4 "c11";
+    .port_info 9 /OUTPUT 4 "c12";
+    .port_info 10 /OUTPUT 4 "c21";
+    .port_info 11 /OUTPUT 4 "c22";
+v0x152e07290_0 .net *"_ivl_0", 3 0, L_0x152e19020;  1 drivers
+v0x152e17300_0 .net *"_ivl_10", 3 0, L_0x152e19440;  1 drivers
+L_0x1480680a0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x152e173b0_0 .net *"_ivl_13", 0 0, L_0x1480680a0;  1 drivers
+v0x152e17470_0 .net *"_ivl_14", 3 0, L_0x152e19560;  1 drivers
+L_0x1480680e8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x152e17520_0 .net *"_ivl_17", 0 0, L_0x1480680e8;  1 drivers
+v0x152e17610_0 .net *"_ivl_20", 3 0, L_0x152e19830;  1 drivers
+L_0x148068130 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x152e176c0_0 .net *"_ivl_23", 0 0, L_0x148068130;  1 drivers
+v0x152e17770_0 .net *"_ivl_24", 3 0, L_0x152e199d0;  1 drivers
+L_0x148068178 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x152e17820_0 .net *"_ivl_27", 0 0, L_0x148068178;  1 drivers
+L_0x148068010 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x152e17930_0 .net *"_ivl_3", 0 0, L_0x148068010;  1 drivers
+v0x152e179e0_0 .net *"_ivl_30", 3 0, L_0x152e19c80;  1 drivers
+L_0x1480681c0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x152e17a90_0 .net *"_ivl_33", 0 0, L_0x1480681c0;  1 drivers
+v0x152e17b40_0 .net *"_ivl_34", 3 0, L_0x152e19d60;  1 drivers
+L_0x148068208 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x152e17bf0_0 .net *"_ivl_37", 0 0, L_0x148068208;  1 drivers
+v0x152e17ca0_0 .net *"_ivl_4", 3 0, L_0x152e19180;  1 drivers
+L_0x148068058 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x152e17d50_0 .net *"_ivl_7", 0 0, L_0x148068058;  1 drivers
+v0x152e17e00_0 .net "a11", 2 0, v0x152e18820_0;  1 drivers
+v0x152e17f90_0 .net "a12", 2 0, v0x152e188b0_0;  1 drivers
+v0x152e18020_0 .net "a21", 2 0, v0x152e18940_0;  1 drivers
+v0x152e180d0_0 .net "a22", 2 0, v0x152e189d0_0;  1 drivers
+v0x152e18180_0 .net "b11", 2 0, v0x152e18a60_0;  1 drivers
+v0x152e18230_0 .net "b12", 2 0, v0x152e18b30_0;  1 drivers
+v0x152e182e0_0 .net "b21", 2 0, v0x152e18bc0_0;  1 drivers
+v0x152e18390_0 .net "b22", 2 0, v0x152e18c70_0;  1 drivers
+v0x152e18440_0 .net "c11", 3 0, L_0x152e192c0;  alias, 1 drivers
+v0x152e184f0_0 .net "c12", 3 0, L_0x152e196b0;  alias, 1 drivers
+v0x152e185a0_0 .net "c21", 3 0, L_0x152e19af0;  alias, 1 drivers
+v0x152e18650_0 .net "c22", 3 0, L_0x152e19ee0;  alias, 1 drivers
+L_0x152e19020 .concat [ 3 1 0 0], v0x152e18820_0, L_0x148068010;
+L_0x152e19180 .concat [ 3 1 0 0], v0x152e18a60_0, L_0x148068058;
+L_0x152e192c0 .arith/sum 4, L_0x152e19020, L_0x152e19180;
+L_0x152e19440 .concat [ 3 1 0 0], v0x152e188b0_0, L_0x1480680a0;
+L_0x152e19560 .concat [ 3 1 0 0], v0x152e18b30_0, L_0x1480680e8;
+L_0x152e196b0 .arith/sum 4, L_0x152e19440, L_0x152e19560;
+L_0x152e19830 .concat [ 3 1 0 0], v0x152e18940_0, L_0x148068130;
+L_0x152e199d0 .concat [ 3 1 0 0], v0x152e18bc0_0, L_0x148068178;
+L_0x152e19af0 .arith/sum 4, L_0x152e19830, L_0x152e199d0;
+L_0x152e19c80 .concat [ 3 1 0 0], v0x152e189d0_0, L_0x1480681c0;
+L_0x152e19d60 .concat [ 3 1 0 0], v0x152e18c70_0, L_0x148068208;
+L_0x152e19ee0 .arith/sum 4, L_0x152e19c80, L_0x152e19d60;
+    .scope S_0x152e06c20;
+T_1 ;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0x152e18820_0, 0, 3;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0x152e188b0_0, 0, 3;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0x152e18940_0, 0, 3;
+    %pushi/vec4 5, 0, 3;
+    %store/vec4 v0x152e189d0_0, 0, 3;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x152e18a60_0, 0, 3;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0x152e18b30_0, 0, 3;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0x152e18bc0_0, 0, 3;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0x152e18c70_0, 0, 3;
+    %delay 10000, 0;
+    %vpi_call 2 46 "$display", "Test Case 1 (Small numbers):" {0 0 0};
+    %fork TD_tb_matrix_adder_2x2.display_matrices, S_0x152e06d90;
+    %join;
+    %pushi/vec4 5, 0, 3;
+    %store/vec4 v0x152e18820_0, 0, 3;
+    %pushi/vec4 6, 0, 3;
+    %store/vec4 v0x152e188b0_0, 0, 3;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x152e18940_0, 0, 3;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x152e189d0_0, 0, 3;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0x152e18a60_0, 0, 3;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0x152e18b30_0, 0, 3;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0x152e18bc0_0, 0, 3;
+    %pushi/vec4 5, 0, 3;
+    %store/vec4 v0x152e18c70_0, 0, 3;
+    %delay 10000, 0;
+    %vpi_call 2 53 "$display", "Test Case 2 (Larger numbers):" {0 0 0};
+    %fork TD_tb_matrix_adder_2x2.display_matrices, S_0x152e06d90;
+    %join;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x152e18820_0, 0, 3;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x152e188b0_0, 0, 3;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x152e18940_0, 0, 3;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x152e189d0_0, 0, 3;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x152e18a60_0, 0, 3;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x152e18b30_0, 0, 3;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x152e18bc0_0, 0, 3;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x152e18c70_0, 0, 3;
+    %delay 10000, 0;
+    %vpi_call 2 60 "$display", "Test Case 3 (Overflow Test):" {0 0 0};
+    %fork TD_tb_matrix_adder_2x2.display_matrices, S_0x152e06d90;
+    %join;
+    %vpi_call 2 63 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "S2-T15_tb.v";
+    "./MatrixAdd.v";
