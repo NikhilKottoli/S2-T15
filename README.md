@@ -33,6 +33,10 @@
   
 </details>
 
+##Block Diagram
+<details>
+	<img src="/Snapshots/BlockDiagram.png" alt="Block Diagram" style="display: block; margin: 20px auto;">
+</details>
 <!-- Third Section -->
 ## Working
 <details>
