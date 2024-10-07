@@ -44,26 +44,6 @@ Performs scalar multiplication and matrix subtraction and addition. Accurately c
 
 ---
 
-### DESIGN:
-
-The circuit works in the following manner:
-
-The user inputs a matrix and can do the follwing:
-1.Add/Subtrace another matrix to it
-2.Multiply a valid matrix to it.
-3.Find the transpose of it.
-4.Find the inverse of it, given it exists.
-
-### Flowchart
-
-
- ---
-
-### Truth Table:
-
-
-</details>
-
 <!-- Fourth Section -->
 ## Logisim Circuit Diagram
 <details>
@@ -85,10 +65,3 @@ The user inputs a matrix and can do the follwing:
 ### Test bench File
 	
  </details>
-
- ## References
- <details>
-  <summary>Detail</summary>
-
-</details>
-
