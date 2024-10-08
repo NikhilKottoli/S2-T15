@@ -20,7 +20,7 @@
   <summary>Detail</summary>
   
   - **Motivation:**  
-  Efficient handling of matrices is crucial in various fields, including computer graphics, engineering, data science, and machine learning. The need for systems that can efficiently compute the transpose and determinant is essential in these emerging fields.
+  Efficient handling of matrices is crucial in various fields, including computer graphics, engineering, data science, and machine learning. The need for systems that can efficiently perform these operations and which can be easily scaled are essential. We aimed to make a system which not only performs the most common operations but also is easy to scale and modular.
 
 - **Problem Statement:**  
   This project addresses the need for efficient matrix operations by developing a tool that exclusively uses combinational and sequential circuits to perform multiplication, transposition, and determinant calculations. This solution is grounded in digital systems and implements most used matrix operations in as little hardware as possible.
