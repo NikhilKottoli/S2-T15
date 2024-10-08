@@ -19,17 +19,18 @@
 <details>
   <summary>Detail</summary>
   
-  <p>Efficient handling of matrices is crucial in various fields, including computer graphics, engineering, and data science and machine learning. The need for systems that can efficiently compute the transpose and determinant is crucial for these emerging fields.</p>
+  - **Motivation:**  
+  Efficient handling of matrices is crucial in various fields, including computer graphics, engineering, data science, and machine learning. The need for systems that can efficiently compute the transpose and determinant is essential in these emerging fields.
 
-  <p>This project addresses the need for efficient matrix operations by developing a tool that exclusively uses combinational and sequential circuits to perform multiplication, transposition, and determinant calculations. This solution is grounded in digital systems and is a scaled-down version of:</p>
+- **Problem Statement:**  
+  This project addresses the need for efficient matrix operations by developing a tool that exclusively uses combinational and sequential circuits to perform multiplication, transposition, and determinant calculations. This solution is grounded in digital systems and implements most used matrix operations in as little hardware as possible.
 
-  <ul>
-    <li>Efficiently multiplies two matrices, handling various inputs and displaying the resulting product in a clear format.</li>
-    <li>Allows users to easily find the transpose of any matrix, visually presenting the result.</li>
-    <li>Performs scalar multiplication and matrix subtraction and addition.</li>
-    <li>Accurately computes the determinant of square matrices and indicates the existence of an inverse.</li>
-    <li>Easy user interface to input and display outputs.</li>
-  </ul>
+- **Features:**  
+  - **Matrix Multiplication:** Efficiently multiplies two matrices, handling various inputs and displaying the resulting product in a clear format.
+  - **Transpose Calculation and Arithmetic Operations:** Allows users to easily find the transpose of any matrix, visually presenting the result. It also performs scalar multiplication and matrix subtraction and addition.
+  - **Determinant Finder:** Accurately computes the determinant of square matrices and indicates the existence of an inverse.
+  - **User-Friendly Interface:** Provides an easy-to-use interface, simplifying data input and output display using a seven-segment display.
+
   
 </details>
 
