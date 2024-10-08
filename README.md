@@ -35,7 +35,7 @@
 </details>
 
 <!-- Block Diagram Section -->
-## Block Diagram
+## Functional Block Diagram
 <details>
   <summary>View Block Diagram</summary>
   <img src="/Snapshots/BlockDiagram.png" alt="Block Diagram" style="display: block; margin: 20px auto;">
