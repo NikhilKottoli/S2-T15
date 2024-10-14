@@ -3,6 +3,7 @@
 `include "MatrixSubtract.v"
 `include "MatrixMultiply.v"
 `include "Transpose.v"
+`include "Determinant.v"
 
 module matrix_operations_2x2_tb();
 
@@ -49,6 +50,19 @@ module matrix_operations_2x2_tb();
     matrix_transpose_2x2 uut_trans (
         .a11(a11), .a12(a12), .a21(a21), .a22(a22),
         .t11(t11), .t12(t12), .t21(t21), .t22(t22)
+    );
+
+    // Inputs for determinant calculation
+    reg [1:0] d11, d12, d21, d22; // 2 bits for each matrix element
+    wire [3:0] det; // Use signed to accommodate negative results
+
+    // Instantiate Unit Under Test (UUT) for determinant calculation
+    determinant_2x2 duut (
+        .d11(d11),
+        .d12(d12),
+        .d21(d21),
+        .d22(d22),
+        .det(det)
     );
 
     // Task to display addition results
@@ -142,6 +156,19 @@ module matrix_operations_2x2_tb();
     end
     endtask
 
+    // Task to display determinant
+    task display_determinant;
+        input [1:0] d11, d12, d21, d22; // Matrix elements
+        input signed [3:0] determinant;  // Determinant value
+    begin
+        $display("Matrix D:");
+        $display("%0d %0d", d11, d12);
+        $display("%0d %0d", d21, d22);
+        $display("Determinant = %0d", determinant);
+        $display("--------------------");
+    end
+    endtask
+
     // Initial block
     initial begin
         // Test case for matrix addition
@@ -160,18 +187,25 @@ module matrix_operations_2x2_tb();
 
         // Test case for matrix multiplication
         A_mul = 8'b00011011;  // Matrix A: {00, 01, 10, 11}
-        B_mul = 8'b01001101;  // Matrix B: {01, 00, 11, 01}
+        B_mul = 8'b01001101;  // Matrix B: {01, 00, 01, 10}
         #10;
         $display("Multiplication Test Case 1:");
         display_multiplication_results();
 
-        // Test case for matrix transpose
+        // Test case for transpose
         #10;
         $display("Transpose Test Case 1:");
         display_transpose_results();
 
-        // Finish the simulation
+        // Test case 1 for determinant calculation
+        d11 = 2'b01; d12 = 2'b11; // 1, 3
+        d21 = 2'b11; d22 = 2'b01; // 3, 1
+        #10;
+
+        // Call the display task for determinant
+        display_determinant(d11, d12, d21, d22, det);
+
+        // Finish simulation
         $finish;
     end
-
 endmodule
