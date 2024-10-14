@@ -1,10 +1,5 @@
 `timescale 1ns / 1ps
-`include "MatrixAdd.v"
-`include "MatrixSubtract.v"
-`include "MatrixMultiply.v"
-`include "Transpose.v"
-`include "Determinant.v"
-`include "Inverse.v"
+`include "S2_T15.v"
 
 module matrix_operations_2x2_tb();
 
