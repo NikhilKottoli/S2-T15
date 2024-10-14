@@ -4,6 +4,7 @@
 `include "MatrixMultiply.v"
 `include "Transpose.v"
 `include "Determinant.v"
+`include "Inverse.v"
 
 module matrix_operations_2x2_tb();
 
@@ -63,6 +64,24 @@ module matrix_operations_2x2_tb();
         .d21(d21),
         .d22(d22),
         .det(det)
+    );
+
+    // Matrix inputs
+    reg signed [3:0] i11, i12, i21, i22;
+    wire [3:0] inv11, inv12, inv21, inv22;
+    wire valid;                // Valid flag
+
+    // Instantiate the inverse_2x2 module
+    inverse_2x2 uut (
+        .d11(i11),
+        .d12(i12),
+        .d21(i21),
+        .d22(i22),
+        .inv11(inv11),
+        .inv12(inv12),
+        .inv21(inv21),
+        .inv22(inv22),
+        .valid(valid)
     );
 
     // Task to display addition results
@@ -169,43 +188,63 @@ module matrix_operations_2x2_tb();
     end
     endtask
 
-    // Initial block
+    // Task to display inverse results
+    task display_inverse_results;
+        input [1:0] d11, d12, d21, d22; // Input matrix elements
+        input signed [3:0] det;          // Determinant
+        input signed [3:0] inv11, inv12, inv21, inv22; // Inverse matrix elements
+        input valid;                      // Validity flag
+    begin
+        $display("Matrix D:");
+        $display("%0d %0d", d11, d12);
+        $display("%0d %0d", d21, d22);
+        $display("Determinant = %0d", det);
+        
+        if (valid) begin
+            $display("Inverse Matrix:");
+            $display("%0d %0d", inv11, inv12);
+            $display("%0d %0d", inv21, inv22);
+        end else begin
+            $display("Matrix is singular; inverse does not exist.");
+        end
+        $display("--------------------");
+    end
+    endtask
+
     initial begin
-        // Test case for matrix addition
-        a11 = 3'd2; a12 = 3'd3;
-        a21 = 3'd4; a22 = 3'd5;
-        b11 = 3'd1; b12 = 3'd2;
-        b21 = 3'd3; b22 = 3'd4;
-        #10;
-        $display("Addition Test Case 1:");
-        display_addition_results();
+        // Initialize matrices A and B
+        a11 = 3; a12 = 2; a21 = 1; a22 = 4; // A
+        b11 = 1; b12 = 1; b21 = 1; b22 = 1; // B
 
-        // Test case for matrix subtraction
-        #10;
-        $display("Subtraction Test Case 1:");
-        display_subtraction_results();
+        // Call display_addition_results
+        #10; // Wait for the addition operation
+        display_addition_results;
 
-        // Test case for matrix multiplication
-        A_mul = 8'b00011011;  // Matrix A: {00, 01, 10, 11}
-        B_mul = 8'b01001101;  // Matrix B: {01, 00, 01, 10}
-        #10;
-        $display("Multiplication Test Case 1:");
-        display_multiplication_results();
+        // Call display_subtraction_results
+        #10; // Wait for the subtraction operation
+        display_subtraction_results;
 
-        // Test case for transpose
-        #10;
-        $display("Transpose Test Case 1:");
-        display_transpose_results();
+        // Initialize matrices for multiplication
+        A_mul = {a11, a12, a21, a22}; // Pack matrix A
+        B_mul = {b11, b12, b21, b22}; // Pack matrix B
+        #10; // Wait for the multiplication operation
+        display_multiplication_results;
 
-        // Test case 1 for determinant calculation
-        d11 = 2'b01; d12 = 2'b11; // 1, 3
-        d21 = 2'b11; d22 = 2'b01; // 3, 1
-        #10;
+        // Call display_transpose_results
+        #10; // Wait for the transpose operation
+        display_transpose_results;
 
-        // Call the display task for determinant
+        // Initialize for determinant calculation
+        d11 = 1; d12 = 2; d21 = 3; d22 = 4; // Example matrix for determinant
+        #10; // Wait for determinant calculation
         display_determinant(d11, d12, d21, d22, det);
 
-        // Finish simulation
-        $finish;
+        // Initialize for inverse calculation
+        i11 = 0; i12 = 3; i21 = 2; i22 = 1; // Example matrix for inverse
+        #10; // Wait for inverse calculation
+        display_inverse_results(i11, i12, i21, i22, det, inv11, inv12, inv21, inv22, valid);
+
+        $finish; // End simulation
     end
+
 endmodule
