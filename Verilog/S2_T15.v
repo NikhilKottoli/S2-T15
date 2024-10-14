@@ -1,3 +1,11 @@
+/*
+    Team:S2-T15
+    Member-1:Aditya Suresh 231CS203
+    Member-2:Nikhil Kottoli 231CS236
+    Member-3:Vishal 231CS263
+*/
+
+
 module determinant_2x2(
     input [1:0] d11, d12, d21, d22,  // 2-bit elements of the 2x2 matrix
     output reg [3:0] det             // 4-bit output for the determinant

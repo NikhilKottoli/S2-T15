@@ -1,3 +1,12 @@
+/*
+    Team:S2-T15
+    Member-1:Aditya Suresh 231CS203
+    Member-2:Nikhil Kottoli 231CS236
+    Member-3:Vishal 231CS263
+*/
+
+
+
 `timescale 1ns / 1ps
 `include "S2_T15.v"
 
