@@ -8,7 +8,7 @@
 
 
 `timescale 1ns / 1ps
-`include "S2_T15.v"
+`include "S2-T15.v"
 
 module matrix_operations_2x2_tb();
 
