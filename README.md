@@ -64,11 +64,16 @@
 <!-- Fifth Section -->
 ## Verilog Code
 <details>
-  <summary>Detail</summary>
-  
-  <p>The Verilog Code for the project will be included in this section.</p>
+  <summary>Details</summary>
 
-  ---
+  The Verilog code for the project includes the following modules:
+
+  1. **MatrixAdd.v**
+  2. **MatrixSubtract.v**
+  3. **MatrixMultiply.v**
+  4. **Transpose.v**
+  5. **Determinant.v**
+  6. **Inverse.v**
   ### Test bench File
   
   <p>The test bench file will be included here.</p>
