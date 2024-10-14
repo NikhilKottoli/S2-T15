@@ -56,8 +56,7 @@
 ## Logisim Circuit Diagram
 <details>
   <summary>Detail</summary>
-  
-  <p>The Logisim Circuit Diagram will be included in this section.</p>
+  <img src="/Snapshots/S2-T15.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
 
 </details>
 
