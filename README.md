@@ -724,7 +724,8 @@ module matrix_operations_2x2_tb();
 
         $finish; // End simulation
     end
-
 endmodule
+```
 </details>
+	<img src = "/Snapshots/VerilogSampleOutput.png" alt="Sample output">
 </details>
