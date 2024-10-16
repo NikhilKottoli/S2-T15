@@ -57,24 +57,35 @@
 <details>
   <summary>Detail</summary>
 	<h2>Main</h2>
+	<p> The following is the main module with which the user interacts to compute his operations.</p>
   <img src="/Snapshots/S2-T15.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
+	<h4> The main submodules are: </h4>
   <h2>Storage</h2>
+	<p>The storage module stores the first input set given by the user and allows us to use the same set of switches to give in another separate set of inputs.</p>
 	 <img src="/Snapshots/Storage.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
 <h2>Adder</h2>
+	<p>The Adder module performs the function of addition of two matrices.</p>
 	 <img src="/Snapshots/Adder.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
 <h2>Subtractor</h2>
+	<p>The Subtractor module performs the function of subtracting one matrix from another.</p>
 	 <img src="/Snapshots/Subtractor.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
 <h2>Matrix Multiplier</h2>
+	<p>The Matrix Multiplier module performs the function of Multiplying two matrices.</p>
 	 <img src="/Snapshots/MatrixMultiplier.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
 <h2>Scalar Multiplier</h2>
+	<p>The Scalar Multiplier module performs the function of multiplying a martix with a scalar number.</p>
 	 <img src="/Snapshots/ScalarMultiplier.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
 <h2>Transpose</h2>
+	<p>The Transpose module performs the function of computing the transpose of the input matrix.</p>
 	 <img src="/Snapshots/Transpose.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
 <h2>Determinant</h2>
+	<p>The Determinant module performs the function of computing the Determinant of the input matrix.</p>
 	 <img src="/Snapshots/Determinant.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
 <h2>Inverse</h2>
+	<p>The Inverse module performs the function of computing the inverse of the input matrix.</p>
 	 <img src="/Snapshots/Inverse.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
 <h2>7-Segment</h2>
+	<p>The 7Segment module performs the function of displaying the output binary number in the form of a readable decimal number.</p>
 	 <img src="/Snapshots/7Segment.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
 </details>
 
