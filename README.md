@@ -49,7 +49,7 @@
 
   ### DESCRIPTION
 
-The core structure of the project is built around modules responsible for accepting inputs, determining which operation to perform, the operations themselves, and displaying the output in simple decimal form. The project operates by allowing a user to input two \(2 \times 2\) matrices (where each element is of 2 bits) and lets them perform the following operations:
+The core structure of the project is built around modules responsible for accepting inputs, determining which operation to perform, the operations themselves, and displaying the output in simple decimal form. The project operates by allowing a user to input two 2x2 matrices (where each element is of 2 bits) and lets them perform the following operations:
 
 - **Addition (A + B)**:  
   The Addition module computes the sum by adding corresponding elements of matrix A and B.
