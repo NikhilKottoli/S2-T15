@@ -46,10 +46,41 @@
 
 <details>
   <summary>Detail</summary>
-  
+
   ### DESCRIPTION
+
+  The core structure of the project is built around modules responsible for accepting inputs, determining which operation to be performed , the operations themselves and 
+  displaying the output in simple decimal form. The project operates by allowing a user to give in two (A and B) 2x2 matrix inputs (wherein each element is of 2 bits) 
+  and lets them perform the operations:
+  -  **Addition (A + B)**:
+    <p>Wherein the Addition module computes the sum by adding corresponding elements of matrix A and B .</p>
+- **Subtraction (A - B)**:
+  <p>Wherein the Subtraction module computes the difference by subtracting the corresponding elements of matrix A and B. It is also able to return negative outputs by converting the conventional 
+  	output(2's complement form) into decimal form along with a negative sign by comparing the inputs initially.</p>
+-  **Multiplication (A × B)**:
+  <p>Wherein the Matrix Multiplier module computes the product by following the mathematical formulae for finding the product of two 2x2 matrices. </p>
+-  **Scalar Multiplication (k × A)**:
+	<p>Wherein the Scalar Multiplier module computes the scalar product by multiplying every individual element with the given scalar input.</p>
+-  Transpose (A^T):
+	<p>Wherein the Transpose module computes the transpose of the given matrix (A) by simply swapping the elements along the right diagonal. </p>
+-  Determinant (det(A)):
+	<p>Wherein the Determinant module computes the determinant of the given matrix (A) by following the mathematical formulae for finding the determinent of a 2x2 matrix.</p>
+-  Inverse (A^(-1)) (if det(A) ≠ 0):
+	<p>Wherein the Inverse module computes the inverse of the given matrix (A) by following the mathematical formulae for finding the inverse of a 2x2 matrix if and only if the determinant of the
+	given matrix is non - zero. If the determinant is found to be zero, the circuit is programmed to return the values:
+	<table border="1" style="border-collapse: collapse;">
+          <tr>
+            <td>00</td>
+            <td>-00</td>
+          </tr>
+          <tr>
+            <td>-00</td>
+            <td>00</td>
+          </tr>
+        </table></p>
+
   
-  Details of the working mechanism of the project will be described here.
+  ### AN EXAMPLE WITH A TRUTH TABLE
   
   Let the inputs be two 2x2 matrices, with each element represented as a 2-bit binary number:
   
