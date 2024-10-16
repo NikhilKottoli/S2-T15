@@ -3,14 +3,6 @@
     Member-1:Aditya Suresh 231CS203
     Member-2:Nikhil Kottoli 231CS236
     Member-3:Vishal 231CS263
-    The Verilog Includes the following Modules:
-    1.Adder
-    2.Subtractor
-    3.Matrix Multiplier
-    4.Scalar Multipler
-    5.Transpose
-    6.Inverse
-    7.Determinant
 */
 
 
@@ -77,11 +69,13 @@ module determinant_2x2_gate_level(
     // Third bit
     xor (temp[2], mult1[2], mult2[2]);
 
-    // Final output
-    assign det = temp; // Assign result
+    // Final output using buffers instead of assign
+    buf (det[0], temp[0]);
+    buf (det[1], temp[1]);
+    buf (det[2], temp[2]);
+    buf (det[3], 1'b0);  // If you want to set the MSB to 0, adjust accordingly
+
 endmodule
-
-
 
 module inverse_2x2(
     input signed [3:0] d11, d12, d21, d22,  // Input elements of the 2x2 matrix
