@@ -90,13 +90,13 @@
 
  The operations performed on these matrices are as follows:
 
-- **0:** Addition (A + B)
-- **1:** Subtraction (A - B)
-- **2:** Multiplication (A × B)
-- **3:** Scalar Multiplication (k × A)
-- **4:** Transpose (A^T)
-- **5:** Determinant (det(A))
-- **6:** Inverse (A^(-1)) (if det(A) ≠ 0)
+- **000:** Addition (A + B)
+- **001:** Subtraction (A - B)
+- **010:** Multiplication (A × B)
+- **011:** Scalar Multiplication (k × A)
+- **100:** Transpose (A^T)
+- **101:** Determinant (det(A))
+- **110:** Inverse (A^(-1)) (if det(A) ≠ 0)
 
   ### Truth Tables for Each Operation
 
