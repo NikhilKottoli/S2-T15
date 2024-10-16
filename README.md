@@ -67,7 +67,7 @@
 	<p>Wherein the Determinant module computes the determinant of the given matrix (A) by following the mathematical formulae for finding the determinent of a 2x2 matrix.</p>
 -  Inverse (A^(-1)) (if det(A) ≠ 0):
 	<p>Wherein the Inverse module computes the inverse of the given matrix (A) by following the mathematical formulae for finding the inverse of a 2x2 matrix if and only if the determinant of the
-	given matrix is non - zero. If the determinant is found to be zero, the circuit is programmed to return the values:
+	given matrix is non - zero. If the determinant is found to be zero, the circuit is programmed to return :
 	<table border="1" style="border-collapse: collapse;">
           <tr>
             <td>00</td>
