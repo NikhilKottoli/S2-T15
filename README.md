@@ -56,8 +56,26 @@
 ## Logisim Circuit Diagram
 <details>
   <summary>Detail</summary>
+	<h2>Main</h2>
   <img src="/Snapshots/S2-T15.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
-
+  <h2>Storage</h2>
+	 <img src="/Snapshots/Storage.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
+<h2>Adder</h2>
+	 <img src="/Snapshots/Adder.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
+<h2>Subtractor</h2>
+	 <img src="/Snapshots/Subtractor.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
+<h2>Matrix Multiplier</h2>
+	 <img src="/Snapshots/MatrixMultiplier.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
+<h2>Scalar Multiplier</h2>
+	 <img src="/Snapshots/ScalarMultiplier.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
+<h2>Transpose</h2>
+	 <img src="/Snapshots/Transpose.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
+<h2>Determinant</h2>
+	 <img src="/Snapshots/Determinant.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
+<h2>Inverse</h2>
+	 <img src="/Snapshots/Inverse.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
+<h2>7-Segment</h2>
+	 <img src="/Snapshots/7Segment.png" alt="Logisim Circuit Diagram" style="display: block; margin: 20px auto;">
 </details>
 
 <!-- Fifth Section -->
