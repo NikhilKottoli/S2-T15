@@ -492,7 +492,7 @@ module matrix_transpose_2x2(
 
 endmodule
 
-module matrix_transpose_2x2(
+module matrix_transpose_2x2_gate(
     input [2:0] a11, a12, a21, a22,  // Elements of matrix A (3-bit each)
     output [2:0] t11, t12, t21, t22  // Elements of transposed matrix T (3-bit each)
 );
