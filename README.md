@@ -168,8 +168,12 @@ module determinant_2x2_gate_level(
     // Third bit
     xor (temp[2], mult1[2], mult2[2]);
 
-    // Final output
-    assign det = temp; // Assign result
+    // Final output using buffers instead of assign
+    buf (det[0], temp[0]);
+    buf (det[1], temp[1]);
+    buf (det[2], temp[2]);
+    buf (det[3], 1'b0);  // If you want to set the MSB to 0, adjust accordingly
+
 endmodule
 
 
