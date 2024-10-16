@@ -58,7 +58,7 @@ The core structure of the project is built around modules responsible for accept
   The Subtraction module computes the difference by subtracting the corresponding elements of matrix A and B. It can also return negative outputs by converting the conventional output (2's complement form) into decimal form along with a negative sign by comparing the inputs initially.
 
 - **Multiplication (A × B)**:  
-  The Matrix Multiplier module computes the product by following the mathematical formulas for finding the product of two 2x2 matrices.
+  The Matrix Multiplier module computes the product by following the mathematical formulae for finding the product of two 2x2 matrices.
 
 - **Scalar Multiplication (k × A)**:  
   The Scalar Multiplier module computes the scalar product by multiplying every individual element with the given scalar input.
@@ -67,10 +67,10 @@ The core structure of the project is built around modules responsible for accept
   The Transpose module computes the transpose of the given matrix (A) by swapping the elements along the right diagonal.
 
 - **Determinant (det(A))**:  
-  The Determinant module computes the determinant of the given matrix (A) by following the mathematical formulas for finding the determinant of a 2x2 matrix.
+  The Determinant module computes the determinant of the given matrix (A) by following the mathematical formulae for finding the determinant of a 2x2 matrix.
 
 - **Inverse (A^(-1)) (if det(A) ≠ 0)**:  
-  The Inverse module computes the inverse of the given matrix (A) by following the mathematical formulas for finding the inverse of a 2x2 matrix, provided the determinant is not zero.
+  The Inverse module computes the inverse of the given matrix (A) by following the mathematical formulae for finding the inverse of a 2x2 matrix, provided the determinant is not zero.
 
 	<p>Wherein the Inverse module computes the inverse of the given matrix (A) by following the mathematical formulae for finding the inverse of a 2x2 matrix if and only if the determinant of the
 	given matrix is non - zero. If the determinant is found to be zero, the circuit is programmed to return the values:
