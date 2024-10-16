@@ -43,14 +43,82 @@
 
 <!-- Third Section -->
 ## Working
+
 <details>
   <summary>Detail</summary>
   
-  <h3>DESCRIPTION</h3>
+  ### DESCRIPTION
   
-  <p>Details of the working mechanism of the project will be described here.</p>
+  Details of the working mechanism of the project will be described here.
+  
+  Let the inputs be two 2x2 matrices, with each element represented as a 2-bit binary number:
+  
+ <table>
+    <tr>
+      <td>A =</td>
+      <td>
+        <table border="1" style="border-collapse: collapse;">
+          <tr>
+            <td>01</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>00</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>B =</td>
+      <td>
+        <table border="1" style="border-collapse: collapse;">
+          <tr>
+            <td>10</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>00</td>
+            <td>01</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
 
+  Note: Each element of the matrices \(A\) and \(B\) can take values from 0 to 3 (i.e., \(00\) to \(11\) in binary).
+
+ The operations performed on these matrices are as follows:
+
+- **0:** Addition (A + B)
+- **1:** Subtraction (A - B)
+- **2:** Multiplication (A × B)
+- **3:** Scalar Multiplication (k × A)
+- **4:** Transpose (A^T)
+- **5:** Determinant (det(A))
+- **6:** Inverse (A^(-1)) (if det(A) ≠ 0)
+
+  ### Truth Tables for Each Operation
+
+  | Control Signal \(S\) | \(a_{11}\) | \(a_{12}\) | \(a_{21}\) | \(a_{22}\) | \(b_{11}\) | \(b_{12}\) | \(b_{21}\) | \(b_{22}\) | Output 1 | Output 2 | Output 3 | Output 4 |
+  |-----------------------|------------|------------|------------|------------|------------|------------|------------|------------|----------|----------|----------|----------|
+  | 000                   | 01         | 10         | 11         | 00         | 10         | 11         | 00         | 01         | 011      | 101      | 011      | 001      |
+  | 001                   | 01         | 10         | 11         | 00         | 10         | 11         | 00         | 01         | 101      | 101      | 11       | 101      |
+  | 010                   | 01         | 10         | 11         | 00         | 10         | 11         | 00         | 01         | 011      | 011      | 011      | 001      |
+  | 100                   | 01         | 10         | 11         | 00         | -          | -          | -          | -          | 001      | 011      | 010      | 000      |
+  | 101                   | 01         | 10         | 11         | 00         | -          | -          | -          | -          | 011      | -        | -        | -        |
+  | 110                   | 01         | 10         | 11         | 00         | -          | -          | -          | -          | 000      | 110      | 111      | 001      |
+
+  **Table 1:** Truth Tables for Matrix Addition, Subtraction, Multiplication, and Transpose
+
+  | Control Signal \(S\) | \(a_{11}\) | \(a_{12}\) | \(a_{21}\) | \(a_{22}\) | Scalar \(k\) | \(k \cdot a_{11}\) | \(k \cdot a_{12}\) | \(k \cdot a_{21}\) | \(k \cdot a_{22}\) |
+  |-----------------------|------------|------------|------------|------------|---------------|-------------------|-------------------|-------------------|-------------------|
+  | 011                   | 01         | 10         | 11         | 00         | 10            | 010               | 100               | 110               | 00                |
+
+  **Table 2:** Truth Table for Scalar Multiplication
 </details>
+
+
 
 <!-- Fourth Section -->
 ## Logisim Circuit Diagram
