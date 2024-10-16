@@ -727,5 +727,8 @@ module matrix_operations_2x2_tb();
 endmodule
 ```
 </details>
+<details>
+	<summary>Sample Output</summary>
 	<img src = "/Snapshots/VerilogSampleOutput.png" alt="Sample output">
+</details>
 </details>
