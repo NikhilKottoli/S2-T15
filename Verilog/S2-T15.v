@@ -491,3 +491,34 @@ module matrix_transpose_2x2(
     assign t22 = a22;  // Bottom-right element stays the same
 
 endmodule
+
+module matrix_transpose_2x2(
+    input [2:0] a11, a12, a21, a22,  // Elements of matrix A (3-bit each)
+    output [2:0] t11, t12, t21, t22  // Elements of transposed matrix T (3-bit each)
+);
+
+    // Intermediate wires to hold the transposed values
+    wire [2:0] temp1; // Holds t11 and t22
+    wire [2:0] temp2; // Holds t12 and t21
+
+    // Assigning top-left and bottom-right directly
+    // Using AND gates to route the original values
+    and (t11[0], a11[0], 1'b1); // t11[0] = a11[0]
+    and (t11[1], a11[1], 1'b1); // t11[1] = a11[1]
+    and (t11[2], a11[2], 1'b1); // t11[2] = a11[2]
+
+    and (t22[0], a22[0], 1'b1); // t22[0] = a22[0]
+    and (t22[1], a22[1], 1'b1); // t22[1] = a22[1]
+    and (t22[2], a22[2], 1'b1); // t22[2] = a22[2]
+
+    // Transposing top-right to bottom-left
+    and (t12[0], a21[0], 1'b1); // t12[0] = a21[0]
+    and (t12[1], a21[1], 1'b1); // t12[1] = a21[1]
+    and (t12[2], a21[2], 1'b1); // t12[2] = a21[2]
+
+    // Transposing bottom-left to top-right
+    and (t21[0], a12[0], 1'b1); // t21[0] = a12[0]
+    and (t21[1], a12[1], 1'b1); // t21[1] = a12[1]
+    and (t21[2], a12[2], 1'b1); // t21[2] = a12[2]
+
+endmodule
