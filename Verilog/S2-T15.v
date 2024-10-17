@@ -516,3 +516,28 @@ module matrix_transpose_2x2_gate(
     and (t21[2], a12[2], 1'b1); // t21[2] = a12[2]
 
 endmodule
+
+module d_ff_gate (
+    input wire D,      // Data input
+    input wire clk,    // Clock input
+    input wire rst,    // Asynchronous reset
+    output wire Q,     // Output Q
+    output wire Q_bar  // Complement of Q
+);
+
+wire D_bar, S, R, clk_bar;
+
+
+nand(D_bar, D, D);
+
+// Invert clock for control
+nand(clk_bar, clk, clk); 
+
+// Set and Reset logic for SR flip-flop
+nand(S, D, clk_bar);      
+nand(R, D_bar, clk_bar);  
+
+    nand(Q, S, Q_bar);        
+    nand(Q_bar, R, Q);        
+
+endmodule
